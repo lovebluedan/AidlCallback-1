@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         printf("send intent & connection to bind");
         Bundle args = new Bundle();
         Intent intent = new Intent("com.unicool.aidlcallback.server.MyService");
+        intent.setPackage("com.unicool.aidlcallback");
         intent.putExtras(args);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 //        startService(intent);
